@@ -1,15 +1,15 @@
 #%%
 import numpy as np
-import pandas as pb
+import pandas as pd
 
 # %%
 np.random.seed(101)
 np.random.randn(5, 4)# 5*4
 
 # %%
-pb.DataFrame(np.random.randn(5, 4))
+pd.DataFrame(np.random.randn(5, 4))
 # %%                                    5                         4
-df = pb.DataFrame(
+df = pd.DataFrame(
     np.random.randn(5, 4),
     index="a b c d e".split(),# 5
     columns='W X Y Z'.split()# 4 -> spelling "columns"
