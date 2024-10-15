@@ -66,8 +66,10 @@ df.set_index("W")
 # not in placed
 # %%
 
+data = np.random.randn(6,2)
+data
 
-
+#%%
 # Index Levels
 outside = ['G1','G2']# Error -> musst matcha the shape 
 inside = [1,2,3,1,2,3]
@@ -81,6 +83,6 @@ hier_index = list(zip(outside,inside))
 hier_index = pd.MultiIndex.from_tuples(hier_index)
 hier_index
 #%%
-df = pd.DataFrame(np.random.randn(6,2),index=hier_index,columns=['A','B'])
+df = pd.DataFrame(data,index=hier_index,columns=['A','B'])
 df
 # %%
