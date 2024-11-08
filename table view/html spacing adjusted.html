@@ -15,14 +15,48 @@
             background-color: #f4f4f9;
         }
         
-        .table-container {
-            /* max-width: 800px;
-            width: 100%; */
+        /* .table-container {
+            max-width: 800px;
+            width: 100%; 
             overflow-x: auto;
             background: #e8dfd2;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        } */
+
+        .table-container {
+            overflow-x: auto;
+            background: #e8dfd2;
+            padding: 40px 20px 20px; /* Space at the top for buttons */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            position: relative; /* To position the buttons */
+        }
+
+        /* Upper buttons (close, minimize, maximize) */
+        .table-buttons {
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #FF5F56; /* Default color for close button */
+        }
+
+        .button:nth-child(2) {
+            background-color: #FFBD2E; /* Minimize button color */
+        }
+
+        .button:nth-child(3) {
+            background-color: #27C93F; /* Maximize button color */
         }
 
         table {
@@ -64,6 +98,14 @@
 </head>
 <body>
     <div class="table-container">
+         <!-- Upper buttons -->
+         <div class="table-buttons">
+            <div class="button"></div>
+            <div class="button"></div>
+            <div class="button"></div>
+        </div>
+
+        <!-- Table -->
         <table>
             <thead>
                 <tr>
