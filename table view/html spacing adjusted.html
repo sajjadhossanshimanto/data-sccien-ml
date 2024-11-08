@@ -28,18 +28,24 @@
         .table-container {
             overflow-x: auto;
             background: #e8dfd2;
-            padding: 40px 20px 20px; /* Space at the top for buttons */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: inline-block;
-            position: relative; /* To position the buttons */
+            position: relative;
+        }
+
+        /* Upper bar styling */
+        .upper-bar {
+            display: flex;
+            align-items: center;
+            background-color: #151718; /* Distinct background color for the upper bar */
+            padding: 10px 15px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
         }
 
         /* Upper buttons (close, minimize, maximize) */
         .table-buttons {
-            position: absolute;
-            top: 10px;
-            left: 15px;
             display: flex;
             gap: 8px;
         }
@@ -59,10 +65,12 @@
             background-color: #27C93F; /* Maximize button color */
         }
 
+        /* Table styling */
+
         table {
             /* width: 100%; */
             border-collapse: separate;
-            border-spacing: 15px 10px; /* Adjusted space between columns and rows */
+            border-spacing: 10px 10px;/* Adjusted space between columns and rows */
         }
 
         th, td {
@@ -98,11 +106,13 @@
 </head>
 <body>
     <div class="table-container">
-         <!-- Upper buttons -->
-         <div class="table-buttons">
-            <div class="button"></div>
-            <div class="button"></div>
-            <div class="button"></div>
+        <!-- Upper bar with buttons -->
+        <div class="upper-bar">
+            <div class="table-buttons">
+                <div class="button"></div>
+                <div class="button"></div>
+                <div class="button"></div>
+            </div>
         </div>
 
         <!-- Table -->
