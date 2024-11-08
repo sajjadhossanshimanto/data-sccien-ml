@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalistic Table with Adjusted Spacing</title>
+    <title>Minimalistic Table with Downloadable Image</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
             background-color: #f4f4f9;
         }
-        
+
         /* .table-container {
             max-width: 800px;
             width: 100%; 
@@ -32,13 +33,14 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: inline-block;
             position: relative;
+            margin-bottom: 20px;
         }
 
         /* Upper bar styling */
         .upper-bar {
             display: flex;
             align-items: center;
-            background-color: #151718; /* Distinct background color for the upper bar */
+            background-color: #151718;
             padding: 10px 15px;
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
@@ -57,25 +59,19 @@
             background-color: #FF5F56; /* Default color for close button */
         }
 
-        .button:nth-child(2) {
-            background-color: #FFBD2E; /* Minimize button color */
-        }
-
-        .button:nth-child(3) {
-            background-color: #27C93F; /* Maximize button color */
-        }
-
-        /* Table styling */
+        .button:nth-child(1) { background-color: #FF5F56; }
+        .button:nth-child(2) { background-color: #FFBD2E; }
+        .button:nth-child(3) { background-color: #27C93F; }
 
         table {
             /* width: 100%; */
             border-collapse: separate;
-            border-spacing: 10px 10px;/* Adjusted space between columns and rows */
+            border-spacing: 10px 10px;
         }
 
         th, td {
-            padding: 15px 20px;/*Enhanced padding */
-            text-align: left;
+            padding: 15px 20px;
+            text-align: center;
             background-color: #fff;
             text-align: center;
         }
@@ -102,11 +98,25 @@
                 font-size: 14px;
             }
         }
+
+        /* Download button styling */
+        .download-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .download-button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
-    <div class="table-container">
-        <!-- Upper bar with buttons -->
+    <div class="table-container" id="tableContainer">
         <div class="upper-bar">
             <div class="table-buttons">
                 <div class="button"></div>
@@ -153,5 +163,21 @@
             </tbody>
         </table>
     </div>
+
+    <button class="download-button" onclick="downloadImage()">Download Image</button>
+
+    <!-- Import html2canvas library for capturing table as an image -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script>
+        function downloadImage() {
+            const tableContainer = document.getElementById("tableContainer");
+            html2canvas(tableContainer).then(canvas => {
+                const link = document.createElement("a");
+                link.href = canvas.toDataURL("image/png");
+                link.download = "table-container.png";
+                link.click();
+            });
+        }
+    </script>
 </body>
 </html>
