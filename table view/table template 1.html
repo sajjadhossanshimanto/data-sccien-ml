@@ -176,6 +176,9 @@
         function downloadImage() {
             const tableContainer = document.getElementById("tableContainer");
             html2canvas(tableContainer, {
+                // width: tableContainer.offsetWidth * 2,  // Adjust width based on scale
+                // height: tableContainer.offsetHeight * 2, // Adjust height based on scale
+                scale: 2, // Scale factor for higher resolution
                 backgroundColor: null // Keeps background transparent
             }).then(canvas => {
                 const link = document.createElement("a");
