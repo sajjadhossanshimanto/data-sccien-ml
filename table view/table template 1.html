@@ -175,13 +175,16 @@
     <script>
         function downloadImage() {
             const tableContainer = document.getElementById("tableContainer");
-            html2canvas(tableContainer).then(canvas => {
+            html2canvas(tableContainer, {
+                backgroundColor: null // Keeps background transparent
+            }).then(canvas => {
                 const link = document.createElement("a");
                 link.href = canvas.toDataURL("image/png");
                 link.download = "table-container.png";
                 link.click();
             });
         }
+
     </script>
 </body>
 </html>
