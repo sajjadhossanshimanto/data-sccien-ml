@@ -69,30 +69,30 @@
         table {
             /* width: 100%; */
             
-            border-collapse: separate;
-            border-spacing: 10px 10px;
+            border-collapse: collapse;
+            /*border-collapse: separate;
+            border-spacing: 10px 10px; */
         }
+
+        /* Remove individual cell backgrounds and set row backgrounds */
+        /* tr {
+            background-color: #ffffff;/* Set common background color for each row 
+        } */
 
         th, td {
             padding: 15px 20px;
             text-align: center;
-            background-color: #fff;
-            text-align: center;
         }
 
         th {
-            background-color: #f7f7f78d;
+            background-color: #f7f7f78d; /* Header background color */
             font-weight: bold;
             border-bottom: 2px solid #e0e0e0;
         }
 
-        td {
-            border-bottom: 1px solid #e0e0e0;
-            border-top: 1px solid #fff;
-        }
-
-        tr:hover td {
-            background-color: #f1f1f1;
+        /* Row hover effect */
+        tr:hover {
+            background-color: #f1f1f1; /* Hover effect on row */
         }
 
         /* Responsive adjustments */
