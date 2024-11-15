@@ -3,23 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Styled Table</title>
+<title>Styled Table with Code Block</title>
 <style>
     /* General styling */
     body {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
         margin: 0;
         background-color: #2f3338;
+        color: #ffffff;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Code block styling */
+    .code-block {
+        background-color: #1e1e1e;
+        color: #dcdcaa;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        font-family: Consolas, "Courier New", monospace;
+        display: inline-block;
+    }
+
+    .code-keyword {
+        color: #569cd6;
+    }
+
+    .code-string {
+        color: #ce9178;
     }
 
     /* Table styling */
     table {
         border-collapse: collapse;
-        font-family: Arial, sans-serif;
-        color: #ffffff;
     }
 
     th, td {
@@ -45,6 +65,12 @@
 </head>
 <body>
 
+<!-- Code block -->
+<div class="code-block">
+    <span class="code-keyword">pd.read_excel</span>(<span class="code-string">'Excel_Sample.xlsx'</span>, <span class="code-keyword">sheetname</span>=<span class="code-string">'Sheet1'</span>)
+</div>
+
+<!-- Table -->
 <table>
     <thead>
         <tr>
@@ -68,7 +94,7 @@
             <td>7</td>
         </tr>
         <tr>
-            <td>8888888</td>
+            <td>8</td>
             <td>9</td>
             <td>10</td>
             <td>11</td>
