@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Styled Table</title>
+<style>
+    /* General styling */
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #2f3338;
+    }
+
+    /* Table styling */
+    table {
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        color: #ffffff;
+    }
+
+    th, td {
+        padding: 10px 20px;
+        text-align: center;
+        font-weight: normal;
+    }
+
+    /* Header row styling */
+    th {
+        background-color: #343840;
+    }
+
+    /* Body row styling */
+    tr:nth-child(odd) td {
+        background-color: #2f3338;
+    }
+
+    tr:nth-child(even) td {
+        background-color: #3a3e46;
+    }
+</style>
+</head>
+<body>
+
+<table>
+    <thead>
+        <tr>
+            <th>a</th>
+            <th>b</th>
+            <th>c</th>
+            <th>d</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>8888888</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
