@@ -16,6 +16,7 @@
         background-color: #2f3338;
         color: #ffffff;
         font-family: Arial, sans-serif;
+        /* gap: 20px; /*Space between code block and table */
     }
 
     /* Code block styling */
@@ -24,9 +25,11 @@
         color: #dcdcaa;
         padding: 10px 20px;
         border-radius: 5px;
-        margin-bottom: 20px;
+        /* margin-bottom: 20px; */
         font-family: Consolas, "Courier New", monospace;
         display: inline-block;
+        text-align: left;
+        width: fit-content;
     }
 
     .code-keyword {
@@ -37,9 +40,16 @@
         color: #ce9178;
     }
 
+    /* Result div styling */
+    .result { 
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
     /* Table styling */
     table {
         border-collapse: collapse;
+        width: 100%;
     }
 
     th, td {
